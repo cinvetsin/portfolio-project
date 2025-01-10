@@ -45,8 +45,7 @@ const Carousel: React.FC<CarouselProps> = ({ images }) => {
       {/* Carousel Wrapper */}
       <div className="relative h-56 overflow-hidden rounded-lg md:h-96">
         {images.map((img, idx) => {
-          const { width, height } = imageDimensions[idx] ?? { width: 1, height: 1 }; // Use ?? for safer fallback
-          const isPortrait = height > width;
+          const { width, height } = imageDimensions[idx] ?? { width: 1, height: 1 };
 
           return (
             <div

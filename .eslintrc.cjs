@@ -1,3 +1,5 @@
+// /** @type {import("eslint").Linter.Config} */
+// @ts-nocheck
 /** @type {import("eslint").Linter.Config} */
 const config = {
   parser: "@typescript-eslint/parser",
@@ -5,7 +7,7 @@ const config = {
     project: true, // Ensure this points to your tsconfig.json if needed
   },
   plugins: [
-    "@typescript-eslint", // Correctly reference the plugin
+    "@typescript-eslint",
   ],
   extends: [
     "next/core-web-vitals",

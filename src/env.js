@@ -29,7 +29,7 @@ export const env = createEnv({
    */
   runtimeEnv: {
     // DATABASE_URL: process.env.DATABASE_URL,
-    DATABASE_URL: process.env.DATABASE_URL || "postgresql://mock:mock@mock:5432/mock", // Provide a mock value if DATABASE_URL is not set
+    DATABASE_URL: process.env.DATABASE_URL ?? "postgresql://mock:mock@mock:5432/mock", // Provide a mock value if DATABASE_URL is not set
     NODE_ENV: process.env.NODE_ENV,
     // NEXT_PUBLIC_CLIENTVAR: process.env.NEXT_PUBLIC_CLIENTVAR,
   },
