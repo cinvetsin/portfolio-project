@@ -21,6 +21,7 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
+    "@napi-rs/canvas": "^0.1.65",
     "@next/font": "^14.2.15",
     "@prisma/client": "^5.14.0",
     "@react-pdf-viewer/core": "^3.12.0",
