@@ -1,0 +1,166 @@
+[
+  {
+    "id": 1,
+    "year": 2023,
+    "title": "Eschickon Wheat Segmentation",
+    "description": "Pest control through image segmentation and image classification of whether the plant is healthy or not. Implemented with the conventional approach and deep learning (U-Net and DeepLabV3+).",
+    "links": [
+      {
+        "label": "Pitch Deck",
+        "url": "https://bit.ly/ImageSegmentationPresentation"
+      }
+    ],
+    "key_tech": ["CNN", "U-Net", "DeepLabV3+", "TensorFlow", "PyTorch", "ResNet50"],
+    "fiels": "Machine Learning"
+  },
+  {
+    "id": 2,
+    "year": 2023,
+    "title": " SERP Model Performance Analysis",
+    "description": "Built and analyzed the performance of Large Language Model (LLM) with GPT (Generative Pre-trained Transformer) models on SERP (Search Engine Results Page)",
+    "links": [
+      {
+        "label": "Video Presentation",
+        "url": "https://bit.ly/SERPVideoPresentation"
+      }
+    ],
+    "key_tech": ["GPT", "BERT", "BM25", "Doc2Vec", "LGBM", "Latent Semantic Indexing (LSI)", "Learning-to-Rank (LTR)"],
+    "fiels": "Machine Learning"
+  },
+  {
+    "id": 3,
+    "year": 2023,
+    "title": "Movie Search Engine and Wiki Web Application",
+    "description": "A Web Application for searching Marvel or DC movies queried with SPARQL, and data saved in RDF model. Implemented Levenshtein Distance for handling mistyped search results with FuzzyWuzzy.",
+    "links": [
+      {
+        "label": "Code Repository",
+        "url": "https://github.com/marvel-dc-tujuh/marvel-dc-app"
+      },
+      {
+        "label": "Documentation",
+        "url": "https://bit.ly/DocsSemwebProject"
+      }
+    ],
+    "key_tech": ["SPARQL", "FuzzyWuzzy", "RDF Data", "Google Cloud Platform"],
+    "fiels": "Machine Learning"
+  },
+  {
+    "id": 4,
+    "year": 2024,
+    "title": "Multimodal Speech Emotion Recognition and Ambiguity Resolution",
+    "description": "Research on Speech Emotion Recognition by classifying types of emotions from text and audio data. The models were built in two approaches, ML and DL-based.",
+    "links": [
+      {
+        "label": "Pitch Deck",
+        "url": "https://bit.ly/BinauralBeats_PBL_FinalProject"
+      }
+    ],
+    "key_tech": ["Speech Emotion Recognition", "Signal Language Processing", "LSTM", "MLP", "Ensemble ML Model"],
+    "fiels": "Machine Learning"
+  },
+  {
+    "id": 5,
+    "year": 2022,
+    "title": "NuTrack",
+    "description": "Nutrition tracker super-app, available for web- and mobile-based. Involved in handling the backend and frontend for the dashboard feature of calorie calculator.",
+    "links": [
+      {
+        "label": "Code Repository - Web Platform",
+        "url": "https://github.com/nutrack/nutrack"
+      },
+      {
+        "label": "Code Repository - Mobile Platform",
+        "url": "https://github.com/nutrack/nutrack_mobile"
+      }
+    ],
+    "key_tech": ["Django", "JavaScript", "Bootstrap", "Flutter", "Dart"],
+    "fiels": "Software Engineering"
+  },
+  {
+    "id": 6,
+    "year": 2024,
+    "title": "Fancom",
+    "description": "A community and marketplace for creative enthusiasts in Indonesia. Contributed to fancom.app's development by using the latest technologies (Next.js, React, tRPC, GitLab CI/CD) and managed to win the award as Best Start-Up Project for extraordinary achievements during the entire software development cycle in the past 6 months.",
+    "links": [
+      {
+        "label": "Code Repository",
+        "url": "https://gitlab.cs.ui.ac.id/fancom-ppl/fancom"
+      },
+      {
+        "label": "Prototype Design",
+        "url": "https://www.figma.com/proto/bP2pWzO1NrWg6wVXyg79mY/Fancom---Design?page-id=0%3A1&node-id=1244-3053&viewport=631%2C532%2C0.07&t=0waV6rNN3gYbVFJC-1&scaling=contain&content-scaling=fixed&starting-point-node-id=1244%3A3053"
+      }
+    ],
+    "key_tech": ["Next.js", "React", "tRPC", "GitLab CI/CD", "Figma"],
+    "fiels": "Software Engineering"
+  },
+  {
+    "id": 7,
+    "year": 2024,
+    "title": "TravelLabel",
+    "description": "A forum discussion and interactive map for tourists. Be responsible for providing maps dataset, building, and training models with TensorFlow, and also leading the team to help them organize the team members' work by holding a weekly stand-up meeting.",
+    "links": [
+      {
+        "label": "Code Repository",
+        "url": "https://github.com/Bangkit-Team-C241-PS371/travellabel-ml-api"
+      },
+      {
+        "label": "APK File",
+        "url": "https://bit.ly/TravelLabel_APK"
+      }
+    ],
+    "key_tech": ["TensorFlow", "Jira", "Google Maps Platform"],
+    "fiels": "Software Engineering"
+  },
+  {
+    "id": 8,
+    "year": 2023,
+    "title": "StudyMate",
+    "description": "A mobile-based platform to assist high school students in their plans to study abroad. Conducted research on user experience to meet the needs of potential early users and designed a prototype.",
+    "links": [
+      {
+        "label": "Prototype Design",
+        "url": "https://www.figma.com/proto/nLYqbsYadD3Yp3DkVdHtBf/StudyMate---Siostra?page-id=0%3A1&node-id=7-7&starting-point-node-id=7%3A7&t=xIJLnKH5U0hfHRaf-1"
+      },
+      {
+        "label": "Mockup Design",
+        "url": "https://www.figma.com/design/nLYqbsYadD3Yp3DkVdHtBf/StudyMate---Siostra?node-id=0-1&t=zy1U9HOZasnc3IaK-1"
+      }
+    ],
+    "key_tech": ["Figma", "Google Workspace"],
+    "fiels": "UI/UX"
+  },
+  {
+    "id": 9,
+    "year": 2024,
+    "title": "EL-CODER",
+    "description": "A Real-Time based Learning Management System that can help students to get guidance in learning competitive programming. Research the needs of potential users, design the course mapping, and design the prototype.",
+    "links": [
+      {
+        "label": "Prototype Design",
+        "url": "https://www.figma.com/proto/3fEToLOkjCMWF4mEnZ1o3Y/EL-CODER?page-id=0%3A1&node-id=138-1050&t=bM800e2svuxp6wtj-1"
+      },
+      {
+        "label": "Mockup Design",
+        "url": "https://www.figma.com/design/3fEToLOkjCMWF4mEnZ1o3Y/EL-CODER?node-id=0-1&t=KNbDEJEZHYuxYvGe-1"
+      }
+    ],
+    "key_tech": ["Figma", "Google Workspace"],
+    "fiels": "UI/UX"
+  },
+  {
+    "id": 10,
+    "year": 2024,
+    "title": "Air Quality Dashboard",
+    "description": "A dashboard that can provide insight into the current air quality based on the pollutants produced. Design, EDA, and visualization of air quality data.",
+    "links": [
+      {
+        "label": "Live Website",
+        "url": "https://sasha-submission-airqual-dashboard.streamlit.app/"
+      }
+    ],
+    "key_tech": ["Python", "Google Colab", "Streamlit"],
+    "fiels": "Data Science"
+  }
+]

@@ -1,0 +1,74 @@
+[
+  {
+    "title": "Bachelor of Computer Science",
+    "organization": "Universitas Indonesia",
+    "duration": "Aug 2021 - Mar 2025",
+    "description": [
+      "Major in Computer Science",
+      "Graduated with a GPA of 3.74/4.00",
+      "Related Coursework:",
+      [
+        "Linear Algebra (CSGE602012)",
+        "Statistics and Probability (CSGE602013)",
+        "Introduction to AI & Data Science (CSGE603130)",
+        "Image Processing (CSCE604133)",
+        "Information Retrieval (CSCE604135)",
+        "Semantic Web (CSCE604131)",
+        "Data Mining (CSCE604137)",
+        "Database (CSGE602070)",
+        "Software Engineering (CSCM603125)",
+        "Software Engineering Project (CSCM603228)"
+      ]
+    ],
+    "type": "formal",
+    "certificate": null
+  },
+  {
+    "title": "Machine Learning Cohort",
+    "organization": "Bangkit Academy led by Google, Tokopedia, Gojek, & Traveloka",
+    "duration": "Feb 2024 - Jul 2024",
+    "description": [
+      "Graduated with GPA 90.88/100.00",
+      "Selected as top 10% Machine Learning Cohort applicants",
+      "Related Coursework:",
+      [
+        "Google IT Automation with Python",
+        "Data Analysis with Python",
+        "Google Data Analytics",
+        "Mathematics for Machine Learning and Data Science",
+        "Machine Learning Specialization",
+        "Deep Learning Specialization",
+        "TensorFlow: Advanced Technique Specialization"
+      ]
+    ],
+    "type": "nonformal",
+    "certificate": "1v_ll8zVtQQX0czgFqFJ2cwgVWO8vYDX7"
+  },
+  {
+    "title": "Winter School 2023",
+    "organization": "Hanyang University",
+    "duration": "Jan 2024 - Feb 2024",
+    "description": [
+      "Graduated with Cumulative GPA: 3.75/4.5 (equivalent to 92.5/100.0)",
+      "Took Courses:",
+      [
+        "Contemporary Society and Marketing",
+        "Principles of Microeconomics"
+      ]
+    ],
+    "type": "nonformal",
+    "certificate": "1FEp5TgmbjhMaTGv15WSX61-kak67U48-"
+  },
+  {
+    "title": "High School Diploma",
+    "organization": "SMA Negeri 28 Jakarta",
+    "duration": "Aug 2018 - May 2021",
+    "description": [
+      "Major in Mathematics and Natural Sciences",
+      "Graduated with a GPA of 92.50/100.00",
+      "Activities and Societies: 28 Robotics Club"
+    ],
+    "type": "formal",
+    "certificate": null
+  }
+]

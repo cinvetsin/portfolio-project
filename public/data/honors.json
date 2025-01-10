@@ -1,0 +1,34 @@
+{
+    "honors": [
+      {
+        "title": "Awardee of BSI Scholarship Prestasi Batch 2",
+        "organization": "BSI (Bank Syariah Indonesia) Maslahat",
+        "date": "Spring 2023",
+        "description": [
+          "Become an awardee of BSI Scholarship which aims to build future leaders of people who have character, are trustworthy can be role models, and can contribute to building the community, especially in the Sharia economic industry.",
+          "Related skills: Project Management, Sharia Economy Literacy, Personal Branding, Leadership"
+        ]
+      }
+    ],
+    "awards": [
+      {
+        "title": "Best Research Paper",
+        "organization": "International Science Conference",
+        "date": "October 2022",
+        "description": [
+          "Received for presenting the paper on AI and machine learning.",
+          "Competed among researchers from over 50 countries."
+        ]
+      },
+      {
+        "title": "Hackathon Winner",
+        "organization": "TechFest 2023",
+        "date": "March 2023",
+        "description": [
+          "Led a team of 5 to build an innovative app in 24 hours.",
+          "Won the grand prize for creativity and technical excellence."
+        ]
+      }
+    ]
+  }
+  

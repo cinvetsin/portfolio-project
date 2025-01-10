@@ -1,0 +1,115 @@
+[
+  {
+    "title": "Teaching Assistant",
+    "organization": "Faculty of Computer Science Universitas Indonesia",
+    "duration": "Jun 2022 - Present",
+    "description": [
+      "Conducted tutoring sessions to help struggling students catch up in their classes, and also developed and implemented student-led projects that promoted critical thinking and collaboration.",
+      "Have been assisting in several classes: Calculus 1, Discrete Mathematics, Statistics and Probability, Introduction to Digital System, Programming Foundations 2, Computer Vision, and Software Engineering."
+    ],
+    "type": "work",
+    "image": ["https://i.imgur.com/dA42W88.jpg"]
+  },
+  {
+    "title": "Research Assistant",
+    "organization": "Otoritas Jasa Keuangan, Indonesia",
+    "duration": "Jul 2024 - Sep 2024",
+    "description": [
+      "Carried out research related to various insurance products that apply in Indonesia and supervised by Indonesia's Financial Services Authority (Otoritas Jasa Keuangan).",
+      "Built insurance credit scoring with several machine-learning models for classification with an F1-score of 99%, regression, and clustering tasks."
+    ],
+    "type": "work",
+    "image": [
+      "https://i.imgur.com/Xq68QKh.jpg",
+      "https://i.imgur.com/a8uAg7q.jpg",
+      "https://i.imgur.com/6uZwSeo.jpg"
+    ],
+    "certificate": "1d6JUiJoPJHFg6QyO_McDFTTGEXfi-P05"
+  },
+  {
+    "title": "IT Developer Intern",
+    "organization": "PT Indonesia Satu Tujuh ",
+    "duration": "Jun 2022 - Aug 2022",
+    "description": [
+      "Explored one form of VOIP protocol, namely SIP on low-level networks.",
+      "Created a responsive web app project with Flutter and studied the BLoC concept in  separating presentation and business logic."
+    ],
+    "type": "work"
+  },
+  {
+    "title": "Vice Person In Change of Data Science Academy",
+    "organization": "COMPFEST 15, Jakarta, Indonesia",
+    "duration": "Jan 2023 - Dec 2023",
+    "description": [
+      "Designed the curriculum and timeline for a three-week data science boot camp event with expert staff and PIC.",
+      "Successfully attracted the attention of more than 1300 potential participants to register and succeeded in inviting experts in data science as speakers, judges, and mentors from  notable companies, such as Tokopedia, Bukalapak, and Telkomsel."
+    ],
+    "type": "volunteering",
+    "image": [
+      "https://i.imgur.com/CCp81tB.jpg",
+      "https://i.imgur.com/Ki8B2Vb.jpg",
+      "https://i.imgur.com/GjgH8GY.jpg"
+    ]
+  },
+  {
+    "title": "Mentor of Summer Club 2023",
+    "organization": "Generation Girl (Yayasan  Generasi Maju Berkarya), Jakarta, Indonesia",
+    "duration": "Jul 2023 - Sep 2023",
+    "description": [
+      "Planned the course module for a one-week period of Summer Club.",
+      "Mentored over 30 mentees to give a basic understanding of data science, such as data type, data cleaning and pre-processing, exploratory data analysis (EDA), model building, and evaluation, and also front-end websites, such as HTML, CSS, and Javascript."
+    ],
+    "type": "volunteering",
+    "certificate": "1KLh2NeayjPj9nQLuoE7vvzVLM3JqMIWT"
+  },
+  {
+    "title": "Treasurer",
+    "organization": "DPM Fakultas Ilmu Komputer Universitas Indonesia",
+    "duration": "Feb 2022 - Feb 2023",
+    "description": [
+      "Supervised all the incomes and expenditures of DPM Fasilkom UI.",
+      "Planned organization's budget for one period."
+    ],
+    "type": "volunteering",
+    "image": [
+      "https://i.imgur.com/hx4eM6j.jpg"
+    ]
+  },
+  {
+    "title": "Mentor of IEEExcel : Accelerate yourself in Data Analytics with Experts",
+    "organization": "IEEE Student Branch Universitas Indonesia",
+    "duration": "Apr 2022",
+    "description": [
+      "Assisted in utilizing data analytic tools to analyze and visualize data.",
+      "Given basic understanding about exploratory data analysis and data visualization."
+    ],
+    "type": "volunteering",
+    "certificate": "1-HovkS9HSdbCFDBeHTeNGL2OgSagI6o8"
+  },
+  {
+    "title": "Peer Counselor of Curhat Sama Panda",
+    "organization": "BEM Fakultas Ilmu Komputer Universitas Indonesia",
+    "duration": "Jan 2022 - Mar 2022",
+    "description": [
+      "Provided confidential support and guidance to fellow students, helping them navigate academic, personal, and social challenges.",
+      "Facilitated one-on-one counseling sessions to offer emotional support, practical advice, and problem-solving strategies.",
+      "Participated in training programs to enhance counseling skills and stay updated on best practices in peer support"
+    ],
+    "type": "volunteering",
+    "certificate": "1qHYzdJzGx02Q1QpxhJj3HeP1VQnA3oEN"
+  },
+  {
+    "title": "Intern at Science Department",
+    "organization": "BEM Fakultas Ilmu Komputer Universitas Indonesia",
+    "duration": "Sep 2021 - Dec 2021",
+    "description": [
+      "Been involved in:",
+      [
+        "Road To Champion (RTC) Program, a program that facilitates Computer Science students at the University of Indonesia in participating in science competitions and appreciates those who win the competition",
+        "Kuis SBF Keilmuan, quiz competition for Computer Science students organized and held by the Intern of Science Department."
+      ]
+    ],
+    "type": "volunteering",
+    "certificate": "19ViW0dqGmkuxZU2D8ROO5RDgGf4Y_n6T"
+  }
+]
