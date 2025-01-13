@@ -1,34 +1,89 @@
 {
-    "honors": [
-      {
-        "title": "Awardee of BSI Scholarship Prestasi Batch 2",
-        "organization": "BSI (Bank Syariah Indonesia) Maslahat",
-        "date": "Spring 2023",
-        "description": [
-          "Become an awardee of BSI Scholarship which aims to build future leaders of people who have character, are trustworthy can be role models, and can contribute to building the community, especially in the Sharia economic industry.",
-          "Related skills: Project Management, Sharia Economy Literacy, Personal Branding, Leadership"
-        ]
-      }
-    ],
-    "awards": [
-      {
-        "title": "Best Research Paper",
-        "organization": "International Science Conference",
-        "date": "October 2022",
-        "description": [
-          "Received for presenting the paper on AI and machine learning.",
-          "Competed among researchers from over 50 countries."
-        ]
-      },
-      {
-        "title": "Hackathon Winner",
-        "organization": "TechFest 2023",
-        "date": "March 2023",
-        "description": [
-          "Led a team of 5 to build an innovative app in 24 hours.",
-          "Won the grand prize for creativity and technical excellence."
-        ]
-      }
-    ]
-  }
-  
+  "honors": [
+    {
+      "title": "Awardee of BSI Scholarship Talenta Batch 2",
+      "organization": "BSI (Bank Syariah Indonesia) Maslahat",
+      "date": "Dec 2024 - Present",
+      "description": [
+        "Awarded a prestigious scholarship aimed at supporting final-year undergraduate students with financial assistance and career development opportunities.",
+        "Demonstrated commitment to academic excellence and professional growth, leveraging the scholarship's resources to achieve career objectives.",
+        "Related skills: Leadership, Managerial, Communication, Problem Solving, Time Management, Networking"
+      ]
+    },
+    {
+      "title": "Awardee of BSI Scholarship Prestasi Batch 2",
+      "organization": "BSI (Bank Syariah Indonesia) Maslahat",
+      "date": "Jan 2022 - Aug 2024",
+      "description": [
+        "Become an awardee of BSI Scholarship Prestasi which aims to build future leaders of people who have character, are trustworthy can be role models, and can contribute to building the community, especially in the Sharia economic industry.",
+        "Related skills: Project Management, Sharia Economy Literacy, Personal Branding, Leadership"
+      ],
+      "images": ["https://i.imgur.com/h5rBLTX.jpg"]
+    },
+    {
+      "title": "Best Start-Up Project",
+      "organization": "Faculty of Computer Science Universitas Indonesia",
+      "date": "Jun 2024",
+      "description": [
+        "Received for extraordinary achievements during the entire software development cycle in the past 6 months."
+      ],
+      "images": [
+        "https://i.imgur.com/67P28Yb.jpg",
+        "https://i.imgur.com/sejHLzL.jpg"
+      ]
+    }
+  ],
+  "awards": [
+    {
+      "title": "English for Business Communication",
+      "organization": "The British Institute",
+      "date": "Jul 2024",
+      "description": [
+        "Achieved an overall score of 98% and completed a short course of 4.5 hours."
+      ],
+      "certificate": "1vZEHth-NOwd3SUHAjj7VHWsvwDuYtFnf"
+    },
+    {
+      "title": "Structuring Machine Learning Projects",
+      "organization": "DeepLearning.AI",
+      "date": "May 2024",
+      "certificate": "1Uy1HPleqDgtmWifICxr2o4l_ngtSgOgB"
+    },
+    {
+      "title": "TensorFlow: Data and Deployment",
+      "organization": "DeepLearning.AI",
+      "date": "May 2024",
+      "certificate": "1I-1Ed2cEbgpIOWqelSU9gbq9UDVS_NjG"
+    },
+    {
+      "title": "DeepLearning.AI TensorFlow Developer",
+      "organization": "DeepLearning.AI",
+      "date": "Apr 2024",
+      "certificate": "1ZgJwUL8jDRNk5oNQYn-RHubvv-Es5soS"
+    },
+    {
+      "title": "Machine Learning",
+      "organization": "DeepLearning.AI",
+      "date": "Apr 2024",
+      "certificate": "1Dx3XuVwzi5Y3mUl8LaG3GYj93qgKTCaV"
+    },
+    {
+      "title": "Analyze Data to Answer Questions",
+      "organization": "Google Data Analytics",
+      "date": "Mar 2024",
+      "certificate": "1JEvk0w0PBGetdcsyrU98betnxliHNWZE"
+    },
+    {
+      "title": "Crash Course on Python",
+      "organization": "Google Data Analytics",
+      "date": "Feb 2024",
+      "certificate": "1yah0tPKpzkPkzaKMIlTRTlNUesMVbeL6"
+    },
+    {
+      "title": "Introduction to Git and Github",
+      "organization": "Google Data Analytics",
+      "date": "Feb 2024",
+      "certificate": "1u3I2cYTkM5n8UTG6-EPfh4thsdFB_B0y"
+    }
+  ]
+}

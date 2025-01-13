@@ -10,12 +10,12 @@ import HonorsSection from "./_components/Honors";
 
 export default function Home() {
   return (
-    <div className="min-h-screen flex flex-col bg-gray-100"> {/* Light gray background to simulate paper behind content */}
+    <div className="min-h-screen flex flex-col bg-gray-100 dark:bg-gray-800"> {/* Light gray background with dark mode support */}
       {/* Navigation Bar */}
       <Navbar size="small" />
 
-      {/* Main Content Area (with white paper effect) */}
-      <div className="flex-grow shadow-lg">
+      {/* Main Content Area (with white paper effect in light mode and dark paper effect in dark mode) */}
+      <div className="flex-grow shadow-lg bg-white dark:bg-gray-800">
         {/* Hero Section */}
         <HeroSection />
 

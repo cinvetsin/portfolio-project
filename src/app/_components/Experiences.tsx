@@ -64,8 +64,11 @@ export default function ExperienceSection() {
   }
 
   return (
-    <section id="experiences" className="mt-20 bg-gray-100 py-12 text-center pt-28">
-      <h2 className="font-grace text-4xl font-bold text-blue-500">
+    <section
+      id="experiences"
+      className="mt-20 bg-gray-100 py-4 pt-28 text-center dark:bg-gray-800"
+    >
+      <h2 className="font-grace text-4xl font-bold text-blue-500 dark:text-blue-300">
         Experience
       </h2>
 
@@ -73,21 +76,21 @@ export default function ExperienceSection() {
       <div className="mt-8 inline-flex rounded-md shadow-sm" role="group">
         <button
           onClick={() => filterExperiences("work")}
-          className={`rounded-s-md border-2 border-gray-900 px-4 py-2 font-comingSoon text-sm font-medium text-gray-900 transition-colors duration-200 ${
+          className={`rounded-s-md border-2 border-gray-900 dark:border-gray-700 px-4 py-2 font-comingSoon text-sm font-medium text-gray-900 dark:text-gray-300 transition-colors duration-200 ${
             activeFilter === "work"
-              ? "bg-gray-900 text-white"
-              : "bg-transparent hover:bg-gray-900 hover:text-white"
-          } focus:ring-2 focus:ring-gray-500`}
+              ? "bg-gray-900 text-white dark:bg-gray-700 dark:text-white"
+              : "bg-transparent hover:bg-gray-900 hover:text-white dark:hover:bg-gray-700 dark:hover:text-white"
+          } focus:ring-2 focus:ring-gray-500 dark:focus:ring-gray-500`}
         >
           Work
         </button>
         <button
           onClick={() => filterExperiences("volunteering")}
-          className={`rounded-e-md border-2 border-gray-900 px-4 py-2 font-comingSoon text-sm font-medium text-gray-900 transition-colors duration-200 ${
+          className={`rounded-s-md border-2 border-gray-900 dark:border-gray-700 px-4 py-2 font-comingSoon text-sm font-medium text-gray-900 dark:text-gray-300 transition-colors duration-200 ${
             activeFilter === "volunteering"
-              ? "bg-gray-900 text-white"
-              : "bg-transparent hover:bg-gray-900 hover:text-white"
-          } focus:ring-2 focus:ring-gray-500`}
+              ? "bg-gray-900 text-white dark:bg-gray-700 dark:text-white"
+              : "bg-transparent hover:bg-gray-900 hover:text-white dark:hover:bg-gray-700 dark:hover:text-white"
+          } focus:ring-2 focus:ring-gray-500 dark:focus:ring-gray-500`}
         >
           Volunteering
         </button>
@@ -95,18 +98,18 @@ export default function ExperienceSection() {
 
       {/* Timeline Container */}
       <div className="mx-auto mt-8 max-w-4xl px-4">
-        <ol className="relative border-s-4 border-gray-900 dark:border-gray-700">
+        <ol className="relative ms-12 border-s-4 border-gray-900 dark:border-gray-700">
           {filteredExperiences
             .slice(0, visibleCount)
             .map((experience, index) => (
               <li key={index} className="mb-10 ms-6">
                 {/* Duration on the Left Side */}
-                <time className="absolute -start-48 mt-2 font-singleDay text-xl font-normal leading-none text-gray-600 dark:text-gray-500">
+                <time className="absolute -left-48 mt-2 font-singleDay text-xl font-normal leading-none text-gray-600 dark:text-gray-400">
                   {experience.duration}
                 </time>
 
                 {/* Timeline Icon */}
-                <span className="absolute -start-3 flex h-6 w-6 items-center justify-center rounded-full bg-blue-100 ring-8 ring-white dark:bg-blue-900 dark:ring-gray-900">
+                <span className="absolute -left-4 flex h-6 w-6 items-center justify-center rounded-full bg-blue-100 ring-8 ring-white dark:bg-blue-900 dark:ring-gray-900">
                   {experience.type === "work" ? (
                     <BriefcaseBusiness className="h-4 w-4 text-blue-800 dark:text-blue-300" />
                   ) : (
@@ -116,13 +119,13 @@ export default function ExperienceSection() {
 
                 {/* Timeline Content */}
                 <div className="ml-8">
-                  <h3 className="mb-1 text-left font-comingSoon text-2xl font-semibold text-gray-900 dark:text-white">
+                  <h3 className="mb-1 text-left font-comingSoon text-2xl font-semibold text-gray-900 dark:text-gray-100">
                     {experience.title}
                   </h3>
                   <p className="text-left font-singleDay text-xl font-normal text-gray-500 dark:text-gray-400">
                     {experience.organization}
                   </p>
-                  <ul className="mt-2 list-inside list-disc font-singleDay text-lg text-left text-gray-600">
+                  <ul className="mt-2 list-inside list-disc text-left font-singleDay text-lg text-gray-600 dark:text-gray-300">
                     {experience.description.map((item, i) =>
                       Array.isArray(item) ? (
                         <ul
@@ -138,21 +141,16 @@ export default function ExperienceSection() {
                       ),
                     )}
                   </ul>
-
-                  {/* Carousel for images */}
                   {experience.image && experience.image.length > 0 && (
                     <Carousel images={experience.image} />
                   )}
-
-                  {/* Accordion for Certificate */}
                   {experience.certificate && (
                     <details className="mt-6">
-                      <summary className="cursor-pointer text-left font-comingSoon font-bold text-blue-500 hover:text-blue-700">
+                      <summary className="cursor-pointer text-left font-comingSoon font-bold text-blue-500 hover:text-blue-700 dark:text-blue-300 dark:hover:text-blue-500">
                         View Certificate
                       </summary>
                       <div className="mt-4 flex flex-col items-center">
-                        {/* Embed Google Drive PDF preview */}
-                        <div className="w-full max-w-3xl overflow-hidden rounded-lg border border-gray-300 shadow-md">
+                        <div className="w-full max-w-3xl overflow-hidden rounded-lg border border-gray-300 shadow-md dark:border-gray-700">
                           <iframe
                             src={`https://drive.google.com/file/d/${experience.certificate}/preview`}
                             width="100%"
@@ -162,11 +160,10 @@ export default function ExperienceSection() {
                           ></iframe>
                         </div>
 
-                        {/* Download Button */}
                         <a
                           href={`https://drive.google.com/uc?export=download&id=${experience.certificate}`}
                           download
-                          className="mt-4 flex items-center justify-center rounded-full bg-blue-500 px-6 py-2 font-comingSoon text-white transition-colors hover:bg-blue-700"
+                          className="mt-4 flex items-center justify-center rounded-full bg-blue-500 px-6 py-2 font-comingSoon text-white transition-colors hover:bg-blue-700 dark:bg-blue-700 dark:hover:bg-blue-500"
                         >
                           <Download className="mr-2 h-5 w-5" />
                           Download Certificate
@@ -178,11 +175,11 @@ export default function ExperienceSection() {
               </li>
             ))}
         </ol>
-        {/* Load More Button */}
+
         {visibleCount < filteredExperiences.length && (
           <button
             onClick={loadMore}
-            className="mt-6 w-full rounded-full border-4 border-black px-6 py-2 font-comingSoon font-bold text-black transition-all hover:border-gray-700 hover:text-gray-700"
+            className="mt-6 w-full rounded-full border-4 border-black px-6 py-2 font-singleDay text-lg font-bold text-black transition-all hover:border-gray-700 hover:text-gray-700 dark:border-gray-600 dark:text-gray-300 dark:hover:border-gray-500 dark:hover:text-white"
           >
             Load More
           </button>

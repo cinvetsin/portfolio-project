@@ -20,13 +20,15 @@ export default function ProjectsSection() {
   const [hoveredField, setHoveredField] = useState<string | null>(null);
   const [projectsData, setProjectsData] = useState<Project[]>([]);
   const [loading, setLoading] = useState(true);
-  const [expandedDescriptions, setExpandedDescriptions] = useState<Record<number, boolean>>({});
+  const [expandedDescriptions, setExpandedDescriptions] = useState<
+    Record<number, boolean>
+  >({});
 
   // Fetch projects data from the JSON file
   useEffect(() => {
     fetch("/data/projects.json")
       .then((response) => response.json())
-      .then((data: Project[]) => {  // Typed here
+      .then((data: Project[]) => {
         setProjectsData(data);
         setLoading(false);
       })
@@ -64,9 +66,9 @@ export default function ProjectsSection() {
   }
 
   return (
-    <section id="projects" className="bg-gray-100 pt-28">
+    <section id="projects" className="bg-gray-100 pt-28 dark:bg-gray-800">
       {/* Projects Title */}
-      <h2 className="text-center font-grace text-4xl font-bold text-blue-500">
+      <h2 className="text-center font-grace text-4xl font-bold text-blue-500 dark:text-blue-300">
         Projects
       </h2>
 
@@ -178,11 +180,12 @@ export default function ProjectsSection() {
           {filteredProjects.map((project) => (
             <div
               key={project.id}
-              className="rounded-lg border-4 border-gray-800 bg-gray-300 p-6 shadow-lg"
+              className="rounded-lg border-4 border-gray-800 bg-gray-300 p-6 shadow-lg dark:border-gray-200 dark:bg-gray-700"
             >
-              <h3 className="font-comingSoon text-xl font-bold">
+              <h3 className="font-comingSoon text-xl font-bold text-gray-800 dark:text-gray-200">
                 {project.title} ({project.year})
               </h3>
+
               <div className="mt-2 flex flex-wrap gap-2">
                 {project.links.map((link, index) => (
                   <a
@@ -190,21 +193,22 @@ export default function ProjectsSection() {
                     href={link.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="font-comingSoon font-bold inline-block rounded-full border-2 border-gray-800 bg-transparent px-4 py-2 text-sm font-small text-gray-800 transition-all duration-200 hover:bg-[#FEDDC6] hover:text-gray-800"
+                    className="inline-block rounded-full border-2 border-gray-800 bg-transparent px-4 py-2 font-comingSoon text-sm font-bold text-gray-800 transition-all duration-200 hover:bg-[#FEDDC6] hover:text-gray-800 dark:border-gray-200 dark:text-gray-200 dark:hover:bg-[#4A3F35] dark:hover:text-gray-100"
                   >
                     {link.label}
                   </a>
                 ))}
               </div>
+
               {/* Fancier Accordion for Description */}
               <div className="mt-4">
                 <button
                   onClick={() => toggleDescription(project.id)}
-                  className="flex items-center justify-between w-full p-3 font-medium text-left text-gray-800 bg-gray-200 rounded-lg hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-400"
+                  className="flex w-full items-center justify-between rounded-lg bg-gray-200 p-3 text-left font-medium text-gray-800 hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-400 dark:bg-gray-600 dark:text-gray-200 dark:hover:bg-gray-500 dark:focus:ring-gray-500"
                 >
                   <span className="flex items-center font-singleDay">
                     <svg
-                      className="w-5 h-5 mr-2 shrink-0"
+                      className="mr-2 h-5 w-5 shrink-0"
                       fill="currentColor"
                       viewBox="0 0 20 20"
                       xmlns="http://www.w3.org/2000/svg"
@@ -215,10 +219,12 @@ export default function ProjectsSection() {
                         clipRule="evenodd"
                       ></path>
                     </svg>
-                    {expandedDescriptions[project.id] ? "Hide Description" : "Show Description"}
+                    {expandedDescriptions[project.id]
+                      ? "Hide Description"
+                      : "Show Description"}
                   </span>
                   <svg
-                    className={`w-4 h-4 shrink-0 transition-transform ${
+                    className={`h-4 w-4 shrink-0 transition-transform ${
                       expandedDescriptions[project.id] ? "rotate-180" : ""
                     }`}
                     fill="none"
@@ -235,14 +241,13 @@ export default function ProjectsSection() {
                   </svg>
                 </button>
                 {expandedDescriptions[project.id] && (
-                  <div className="mt-2 p-4 bg-gray-100 rounded-lg">
-                    <p className="font-singleDay text-gray-700">
-                      {project.description}
-                    </p>
+                  <div className="mt-2 rounded-lg bg-gray-200 p-4 text-gray-800 shadow-lg dark:bg-gray-800 dark:text-gray-100">
+                    <p className="font-singleDay">{project.description}</p>
                   </div>
                 )}
               </div>
-              <p className="mt-2 text-m text-gray-700 font-singleDay">
+
+              <p className="text-m mt-2 font-singleDay text-gray-700 dark:text-gray-200">
                 <strong>Key Technologies:</strong> {project.key_tech.join(", ")}
               </p>
             </div>
