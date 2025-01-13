@@ -78,100 +78,116 @@ export default function ProjectsSection() {
       </div>
 
       {/* Filter Links */}
-      <div className="mt-4 flex justify-center space-x-3 px-4">
-        <button
-          onClick={() => setSelectedField("all")}
-          onMouseEnter={() => setHoveredField("all")}
-          onMouseLeave={() => setHoveredField(null)}
-          className="p-4"
-        >
-          <Image
-            src={
-              selectedField === "all" || hoveredField === "all"
-                ? "/icons/tags/all_fields_clicked.svg"
-                : "/icons/tags/all_fields.svg"
-            }
-            alt="All Fields"
-            width={64}
-            height={64}
-            className="h-12 w-64"
-          />
-        </button>
-        <button
-          onClick={() => setSelectedField("data science")}
-          onMouseEnter={() => setHoveredField("data science")}
-          onMouseLeave={() => setHoveredField(null)}
-          className="p-4"
-        >
-          <Image
-            src={
-              selectedField === "data science" ||
-              hoveredField === "data science"
-                ? "/icons/tags/data_science_clicked.svg"
-                : "/icons/tags/data_science.svg"
-            }
-            alt="Data Science"
-            width={64}
-            height={64}
-            className="h-12 w-64"
-          />
-        </button>
-        <button
-          onClick={() => setSelectedField("machine learning")}
-          onMouseEnter={() => setHoveredField("machine learning")}
-          onMouseLeave={() => setHoveredField(null)}
-          className="p-4"
-        >
-          <Image
-            src={
-              selectedField === "machine learning" ||
-              hoveredField === "machine learning"
-                ? "/icons/tags/machine_learning_clicked.svg"
-                : "/icons/tags/machine_learning.svg"
-            }
-            alt="Machine Learning"
-            width={64}
-            height={64}
-            className="h-12 w-64"
-          />
-        </button>
-        <button
-          onClick={() => setSelectedField("software engineering")}
-          onMouseEnter={() => setHoveredField("software engineering")}
-          onMouseLeave={() => setHoveredField(null)}
-          className="p-4"
-        >
-          <Image
-            src={
-              selectedField === "software engineering" ||
-              hoveredField === "software engineering"
-                ? "/icons/tags/software_engineering_clicked.svg"
-                : "/icons/tags/software_engineering.svg"
-            }
-            alt="Software Engineering"
-            width={64}
-            height={64}
-            className="h-12 w-64"
-          />
-        </button>
-        <button
-          onClick={() => setSelectedField("UI/UX")}
-          onMouseEnter={() => setHoveredField("UI/UX")}
-          onMouseLeave={() => setHoveredField(null)}
-          className="p-4"
-        >
-          <Image
-            src={
-              selectedField === "UI/UX" || hoveredField === "UI/UX"
-                ? "/icons/tags/ui_ux_clicked.svg"
-                : "/icons/tags/ui_ux.svg"
-            }
-            alt="UI/UX"
-            width={64}
-            height={64}
-            className="h-12 w-64"
-          />
-        </button>
+      <div className="mt-4 px-4">
+        {/* Dropdown for smaller screens */}
+        <div className="block sm:hidden">
+          <select
+            onChange={(e) => setSelectedField(e.target.value)}
+            value={selectedField}
+            className="w-full font-comingSoon font-bold rounded-md border border-gray-300 p-2"
+          >
+            <option value="all">All Fields</option>
+            <option value="data science">Data Science</option>
+            <option value="machine learning">Machine Learning</option>
+            <option value="software engineering">Software Engineering</option>
+            <option value="UI/UX">UI/UX</option>
+          </select>
+        </div>
+
+        {/* Button group for larger screens */}
+<div className="hidden flex-wrap justify-center gap-1 sm:flex sm:gap-1 lg:gap-3">
+  <button
+    onClick={() => setSelectedField("all")}
+    onMouseEnter={() => setHoveredField("all")}
+    onMouseLeave={() => setHoveredField(null)}
+    className="p-2 sm:p-3 lg:p-4"
+  >
+    <Image
+      src={
+        selectedField === "all" || hoveredField === "all"
+          ? "/icons/tags/all_fields_clicked.svg"
+          : "/icons/tags/all_fields.svg"
+      }
+      alt="All Fields"
+      width={64}
+      height={64}
+      className="h-12 w-48 sm:h-8 sm:w-36 lg:h-12 lg:w-40"
+    />
+  </button>
+  <button
+    onClick={() => setSelectedField("data science")}
+    onMouseEnter={() => setHoveredField("data science")}
+    onMouseLeave={() => setHoveredField(null)}
+    className="p-2 sm:p-3 lg:p-4"
+  >
+    <Image
+      src={
+        selectedField === "data science" || hoveredField === "data science"
+          ? "/icons/tags/data_science_clicked.svg"
+          : "/icons/tags/data_science.svg"
+      }
+      alt="Data Science"
+      width={64}
+      height={64}
+      className="h-12 w-48 sm:h-8 sm:w-36 lg:h-12 lg:w-40"
+    />
+  </button>
+  <button
+    onClick={() => setSelectedField("machine learning")}
+    onMouseEnter={() => setHoveredField("machine learning")}
+    onMouseLeave={() => setHoveredField(null)}
+    className="p-2 sm:p-3 lg:p-4"
+  >
+    <Image
+      src={
+        selectedField === "machine learning" || hoveredField === "machine learning"
+          ? "/icons/tags/machine_learning_clicked.svg"
+          : "/icons/tags/machine_learning.svg"
+      }
+      alt="Machine Learning"
+      width={64}
+      height={64}
+      className="h-12 w-48 sm:h-8 sm:w-36 lg:h-12 lg:w-40"
+    />
+  </button>
+  <button
+    onClick={() => setSelectedField("software engineering")}
+    onMouseEnter={() => setHoveredField("software engineering")}
+    onMouseLeave={() => setHoveredField(null)}
+    className="p-2 sm:p-3 lg:p-4"
+  >
+    <Image
+      src={
+        selectedField === "software engineering" || hoveredField === "software engineering"
+          ? "/icons/tags/software_engineering_clicked.svg"
+          : "/icons/tags/software_engineering.svg"
+      }
+      alt="Software Engineering"
+      width={64}
+      height={64}
+      className="h-12 w-48 sm:h-8 sm:w-36 lg:h-12 lg:w-40"
+    />
+  </button>
+  <button
+    onClick={() => setSelectedField("UI/UX")}
+    onMouseEnter={() => setHoveredField("UI/UX")}
+    onMouseLeave={() => setHoveredField(null)}
+    className="p-2 sm:p-3 lg:p-4"
+  >
+    <Image
+      src={
+        selectedField === "UI/UX" || hoveredField === "UI/UX"
+          ? "/icons/tags/ui_ux_clicked.svg"
+          : "/icons/tags/ui_ux.svg"
+      }
+      alt="UI/UX"
+      width={64}
+      height={64}
+      className="h-12 w-48 sm:h-8 sm:w-36 lg:h-12 lg:w-40"
+    />
+  </button>
+</div>
+
       </div>
 
       {/* Projects Grid */}

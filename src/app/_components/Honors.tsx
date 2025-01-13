@@ -1,15 +1,15 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import { Medal, Trophy, Download } from "lucide-react";
-import Carousel from "./Carousel"; // Ensure you have this component
+import Carousel from "./Carousel";
 
 type Item = {
   title: string;
   organization: string;
   date: string;
   description: string[];
-  images?: string[]; // Array of image URLs
-  certificate?: string; // URL to the PDF certificate (Google Drive preview link)
+  images?: string[];
+  certificate?: string;
 };
 
 type ResponseData = {
@@ -21,7 +21,7 @@ export default function HonorsAwardsSection() {
   const [honors, setHonors] = useState<Item[]>([]);
   const [awards, setAwards] = useState<Item[]>([]);
   const [activeTab, setActiveTab] = useState<"honors" | "awards">("honors");
-  const [visibleCount, setVisibleCount] = useState(2); // Number of visible items
+  const [visibleCount, setVisibleCount] = useState(2);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
@@ -34,7 +34,6 @@ export default function HonorsAwardsSection() {
         return response.json();
       })
       .then((data: unknown) => {
-        // Validate data structure
         if (
           typeof data === "object" &&
           data !== null &&
@@ -69,8 +68,11 @@ export default function HonorsAwardsSection() {
   const items = activeTab === "honors" ? honors : awards;
 
   return (
-    <section id="honors" className="mt-20 py-12 pt-28 text-center bg-gray-100 dark:bg-gray-800">
-      <h2 className="font-grace text-4xl font-bold text-blue-500 dark:text-blue-400">
+    <section
+      id="honors"
+      className="mt-20 bg-gray-100 py-4 pt-28 text-center dark:bg-gray-800"
+    >
+      <h2 className="font-grace text-4xl font-bold text-blue-500 dark:text-blue-300">
         Honors & Awards
       </h2>
 
@@ -79,96 +81,77 @@ export default function HonorsAwardsSection() {
         <button
           onClick={() => {
             setActiveTab("honors");
-            setVisibleCount(2); // Reset visible count when switching tabs
+            setVisibleCount(2);
           }}
           className={`rounded-s-md border-2 border-gray-900 dark:border-gray-700 px-4 py-2 font-comingSoon text-sm font-medium text-gray-900 dark:text-gray-300 transition-colors duration-200 ${
             activeTab === "honors"
               ? "bg-gray-900 text-white dark:bg-gray-700 dark:text-white"
               : "bg-transparent hover:bg-gray-900 hover:text-white dark:hover:bg-gray-700 dark:hover:text-white"
-          } focus:ring-2 focus:ring-gray-500 dark:focus:ring-gray-500`}
+          }`}
         >
-          Awards
+          Honors
         </button>
         <button
           onClick={() => {
             setActiveTab("awards");
-            setVisibleCount(2); // Reset visible count when switching tabs
+            setVisibleCount(2);
           }}
           className={`rounded-e-md border-2 border-gray-900 dark:border-gray-700 px-4 py-2 font-comingSoon text-sm font-medium text-gray-900 dark:text-gray-300 transition-colors duration-200 ${
             activeTab === "awards"
               ? "bg-gray-900 text-white dark:bg-gray-700 dark:text-white"
               : "bg-transparent hover:bg-gray-900 hover:text-white dark:hover:bg-gray-700 dark:hover:text-white"
-          } focus:ring-2 focus:ring-gray-500 dark:focus:ring-gray-500`}
+          }`}
         >
-          Certification
+          Awards
         </button>
       </div>
 
-      {/* Timeline Container */}
-      <div className="mx-auto mt-8 max-w-4xl px-4">
+      {/* Timeline */}
+      <div className="mx-auto mt-8 max-w-full sm:max-w-4xl px-4">
         <ol className="relative ms-12 border-s-4 border-gray-900 dark:border-gray-700">
-          {" "}
-          {/* Added ms-12 for more left margin */}
           {items.slice(0, visibleCount).map((item, index) => (
-            <li key={index} className="mb-10 ms-6">
-              {/* Date on the Left Side */}
-              <time className="absolute -left-48 mt-2 font-singleDay text-xl font-normal leading-none text-gray-600 dark:text-gray-500">
-                {" "}
-                {/* Matched -left-48 */}
-                {item.date}
-              </time>
-
-              {/* Timeline Icon */}
+            <li key={index} className="mb-6 ms-6">
               <span className="absolute -left-4 flex h-6 w-6 items-center justify-center rounded-full bg-blue-100 ring-8 ring-white dark:bg-blue-900 dark:ring-gray-900">
-                {" "}
-                {/* Changed -left-3 to -left-4 */}
                 {activeTab === "honors" ? (
                   <Medal className="h-4 w-4 text-blue-800 dark:text-blue-300" />
                 ) : (
                   <Trophy className="h-4 w-4 text-blue-800 dark:text-blue-300" />
                 )}
               </span>
-
-              {/* Timeline Content */}
               <div className="ml-8">
-                <h3 className="mb-1 text-left font-comingSoon text-2xl font-semibold text-gray-900 dark:text-white">
+                <time className="block mb-1 text-left font-singleDay text-base font-normal text-gray-600 dark:text-gray-400">
+                  {item.date}
+                </time>
+                <h3 className="mb-1 text-left font-comingSoon text-lg font-semibold text-gray-900 dark:text-gray-100">
                   {item.title}
                 </h3>
-                <p className="text-left font-singleDay text-base text-xl font-normal text-gray-500 dark:text-gray-400">
+                <p className="text-left font-singleDay text-base font-normal text-gray-500 dark:text-gray-400">
                   {item.organization}
                 </p>
-                {item.description && ( // Check if description exists
-                  <ul className="mt-2 list-inside list-disc text-left font-singleDay text-lg text-gray-600 dark:text-gray-300">
+                {item.description && (
+                  <ul className="mt-2 list-inside list-disc text-left font-singleDay text-sm text-gray-600 dark:text-gray-300">
                     {item.description.map((desc, i) => (
                       <li key={i}>{desc}</li>
                     ))}
                   </ul>
                 )}
-
-                {/* Carousel for images */}
                 {item.images && item.images.length > 0 && (
                   <Carousel images={item.images} />
                 )}
-
-                {/* Accordion for Certificate */}
                 {item.certificate && (
                   <details className="mt-6">
                     <summary className="cursor-pointer text-left font-comingSoon font-bold text-blue-500 hover:text-blue-700 dark:text-blue-300 dark:hover:text-blue-500">
                       View Certificate
                     </summary>
                     <div className="mt-4 flex flex-col items-center">
-                      {/* Embed Google Drive PDF preview */}
-                      <div className="w-full max-w-3xl overflow-hidden rounded-lg border border-gray-300 shadow-md dark:border-gray-600">
+                      <div className="w-full max-w-3xl overflow-hidden rounded-lg border border-gray-300 shadow-md dark:border-gray-700">
                         <iframe
                           src={`https://drive.google.com/file/d/${item.certificate}/preview`}
                           width="100%"
                           height="480"
-                          allow="autoplay"
                           className="rounded-lg"
                         ></iframe>
                       </div>
-
-                      {/* Download Button */}
                       <a
                         href={`https://drive.google.com/uc?export=download&id=${item.certificate}`}
                         download
@@ -184,8 +167,6 @@ export default function HonorsAwardsSection() {
             </li>
           ))}
         </ol>
-
-        {/* Load More Button */}
         {visibleCount < items.length && (
           <button
             onClick={loadMore}

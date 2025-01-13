@@ -16,11 +16,11 @@ type Experience = {
 export default function ExperienceSection() {
   const [experiences, setExperiences] = useState<Experience[]>([]);
   const [filteredExperiences, setFilteredExperiences] = useState<Experience[]>(
-    [],
+    []
   );
   const [visibleCount, setVisibleCount] = useState(2); // Number of visible sections
   const [activeFilter, setActiveFilter] = useState<"work" | "volunteering">(
-    "work",
+    "work"
   );
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -86,7 +86,7 @@ export default function ExperienceSection() {
         </button>
         <button
           onClick={() => filterExperiences("volunteering")}
-          className={`rounded-s-md border-2 border-gray-900 dark:border-gray-700 px-4 py-2 font-comingSoon text-sm font-medium text-gray-900 dark:text-gray-300 transition-colors duration-200 ${
+          className={`rounded-e-md border-2 border-gray-900 dark:border-gray-700 px-4 py-2 font-comingSoon text-sm font-medium text-gray-900 dark:text-gray-300 transition-colors duration-200 ${
             activeFilter === "volunteering"
               ? "bg-gray-900 text-white dark:bg-gray-700 dark:text-white"
               : "bg-transparent hover:bg-gray-900 hover:text-white dark:hover:bg-gray-700 dark:hover:text-white"
@@ -97,17 +97,12 @@ export default function ExperienceSection() {
       </div>
 
       {/* Timeline Container */}
-      <div className="mx-auto mt-8 max-w-4xl px-4">
+      <div className="mx-auto mt-8 max-w-full sm:max-w-4xl px-4">
         <ol className="relative ms-12 border-s-4 border-gray-900 dark:border-gray-700">
           {filteredExperiences
             .slice(0, visibleCount)
             .map((experience, index) => (
-              <li key={index} className="mb-10 ms-6">
-                {/* Duration on the Left Side */}
-                <time className="absolute -left-48 mt-2 font-singleDay text-xl font-normal leading-none text-gray-600 dark:text-gray-400">
-                  {experience.duration}
-                </time>
-
+              <li key={index} className="mb-6 ms-6">
                 {/* Timeline Icon */}
                 <span className="absolute -left-4 flex h-6 w-6 items-center justify-center rounded-full bg-blue-100 ring-8 ring-white dark:bg-blue-900 dark:ring-gray-900">
                   {experience.type === "work" ? (
@@ -119,13 +114,20 @@ export default function ExperienceSection() {
 
                 {/* Timeline Content */}
                 <div className="ml-8">
-                  <h3 className="mb-1 text-left font-comingSoon text-2xl font-semibold text-gray-900 dark:text-gray-100">
+                  {/* Duration */}
+                  <time className="block mb-1 text-left font-singleDay text-base font-normal text-gray-600 dark:text-gray-400">
+                    {experience.duration}
+                  </time>
+                  {/* Title */}
+                  <h3 className="mb-1 text-left font-comingSoon text-lg font-semibold text-gray-900 dark:text-gray-100">
                     {experience.title}
                   </h3>
-                  <p className="text-left font-singleDay text-xl font-normal text-gray-500 dark:text-gray-400">
+                  {/* Organization */}
+                  <p className="text-left font-singleDay text-base font-normal text-gray-500 dark:text-gray-400">
                     {experience.organization}
                   </p>
-                  <ul className="mt-2 list-inside list-disc text-left font-singleDay text-lg text-gray-600 dark:text-gray-300">
+                  {/* Description */}
+                  <ul className="mt-2 list-inside list-disc text-left font-singleDay text-sm text-gray-600 dark:text-gray-300">
                     {experience.description.map((item, i) =>
                       Array.isArray(item) ? (
                         <ul
@@ -138,12 +140,14 @@ export default function ExperienceSection() {
                         </ul>
                       ) : (
                         <li key={i}>{item}</li>
-                      ),
+                      )
                     )}
                   </ul>
+                  {/* Carousel */}
                   {experience.image && experience.image.length > 0 && (
                     <Carousel images={experience.image} />
                   )}
+                  {/* Certificate */}
                   {experience.certificate && (
                     <details className="mt-6">
                       <summary className="cursor-pointer text-left font-comingSoon font-bold text-blue-500 hover:text-blue-700 dark:text-blue-300 dark:hover:text-blue-500">

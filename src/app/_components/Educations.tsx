@@ -16,7 +16,7 @@ export default function EducationSection() {
   const [filteredEducation, setFilteredEducation] = useState<Education[]>([]);
   const [visibleCount, setVisibleCount] = useState(2); // Number of visible sections
   const [activeFilter, setActiveFilter] = useState<"formal" | "nonformal">(
-    "formal",
+    "formal"
   );
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -94,14 +94,9 @@ export default function EducationSection() {
 
       {/* Timeline Container */}
       <div className="mx-auto mt-8 max-w-4xl px-4">
-        <ol className="relative ms-16 border-s-4 border-gray-900 dark:border-gray-700">
+        <ol className="relative ms-12 border-s-4 border-gray-900 dark:border-gray-700">
           {filteredEducation.slice(0, visibleCount).map((edu, index) => (
-            <li key={index} className="mb-10 ms-6">
-              {/* Duration on the Left Side */}
-              <time className="absolute -left-48 mt-2 font-singleDay text-xl font-normal leading-none text-gray-600 dark:text-gray-400">
-                {edu.duration}
-              </time>
-
+            <li key={index} className="mb-6 ms-6">
               {/* Timeline Icon */}
               <span className="absolute -left-4 flex h-6 w-6 items-center justify-center rounded-full bg-blue-100 ring-8 ring-white dark:bg-blue-900 dark:ring-gray-900">
                 {edu.type === "formal" ? (
@@ -113,13 +108,16 @@ export default function EducationSection() {
 
               {/* Timeline Content */}
               <div className="ml-8">
-                <h3 className="mb-1 text-left font-comingSoon text-2xl font-semibold text-gray-900 dark:text-white">
+                <time className="block mb-1 text-left font-singleDay text-base font-normal text-gray-600 dark:text-gray-400">
+                  {edu.duration}
+                </time>
+                <h3 className="mb-1 text-left font-comingSoon text-lg font-semibold text-gray-900 dark:text-gray-100">
                   {edu.title}
                 </h3>
-                <p className="text-left font-singleDay text-base text-xl font-normal text-gray-500 dark:text-gray-400">
+                <p className="text-left font-singleDay text-base font-normal text-gray-500 dark:text-gray-400">
                   {edu.organization}
                 </p>
-                <ul className="mt-2 list-inside list-disc text-left font-singleDay text-lg text-gray-600 dark:text-gray-300">
+                <ul className="mt-2 list-inside list-disc text-left font-singleDay text-sm text-gray-600 dark:text-gray-300">
                   {edu.description.map((item, i) =>
                     Array.isArray(item) ? (
                       <ul
@@ -132,18 +130,17 @@ export default function EducationSection() {
                       </ul>
                     ) : (
                       <li key={i}>{item}</li>
-                    ),
+                    )
                   )}
                 </ul>
 
-                {/* Accordion for Certificate */}
+                {/* Certificate */}
                 {edu.certificate && (
                   <details className="mt-6">
-                    <summary className="cursor-pointer text-left font-comingSoon font-bold text-blue-500 hover:text-blue-700 dark:text-blue-300 dark:hover:text-blue-400">
+                    <summary className="cursor-pointer text-left font-comingSoon font-bold text-blue-500 hover:text-blue-700 dark:text-blue-300 dark:hover:text-blue-500">
                       View Certificate
                     </summary>
                     <div className="mt-4 flex flex-col items-center">
-                      {/* Embed Google Drive PDF preview */}
                       <div className="w-full max-w-3xl overflow-hidden rounded-lg border border-gray-300 shadow-md dark:border-gray-700">
                         <iframe
                           src={`https://drive.google.com/file/d/${edu.certificate}/preview`}
@@ -154,11 +151,10 @@ export default function EducationSection() {
                         ></iframe>
                       </div>
 
-                      {/* Download Button */}
                       <a
                         href={`https://drive.google.com/uc?export=download&id=${edu.certificate}`}
                         download
-                        className="mt-4 flex items-center justify-center rounded-full bg-blue-500 px-6 py-2 font-comingSoon text-white transition-colors hover:bg-blue-700 dark:bg-blue-600 dark:hover:bg-blue-500"
+                        className="mt-4 flex items-center justify-center rounded-full bg-blue-500 px-6 py-2 font-comingSoon text-white transition-colors hover:bg-blue-700 dark:bg-blue-700 dark:hover:bg-blue-500"
                       >
                         <Download className="mr-2 h-5 w-5" />
                         Download Certificate
@@ -171,7 +167,6 @@ export default function EducationSection() {
           ))}
         </ol>
 
-        {/* Load More Button */}
         {visibleCount < filteredEducation.length && (
           <button
             onClick={loadMore}

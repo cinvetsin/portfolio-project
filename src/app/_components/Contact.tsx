@@ -3,7 +3,7 @@ import { Github, Linkedin, Gitlab, Mail } from "lucide-react";
 
 export default function ContactSection() {
   return (
-    <section id="contact" className="mt-10 text-center">
+    <section id="contact" className="mt-10 text-center mb-10"> {/* Added mb-10 for bottom margin */}
       <h4 className="text-2xl font-bold text-blue-500 dark:text-blue-400 font-comingSoon">
         Feel free to contact me!
       </h4>
