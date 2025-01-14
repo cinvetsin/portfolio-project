@@ -2,7 +2,7 @@
   {
     "title": "Bachelor of Computer Science",
     "organization": "Universitas Indonesia",
-    "duration": "Aug 2021 - Mar 2025",
+    "duration": "Aug 2021 - Feb 2025",
     "description": [
       "Major in Computer Science",
       "Graduated with a GPA of 3.73/4.00",
@@ -18,7 +18,8 @@
         "Data Mining (CSCE604137)",
         "Database (CSGE602070)",
         "Software Engineering (CSCM603125)",
-        "Software Engineering Project (CSCM603228)"
+        "Software Engineering Project (CSCM603228)",
+        "Spoken Language Processing (CSCE604032)"
       ]
     ],
     "type": "formal",
