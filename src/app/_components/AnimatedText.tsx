@@ -13,7 +13,10 @@ type AnimatedTextProps = {
   enthusiastSynonyms: string[];
 };
 
-export default function AnimatedText({ fields, enthusiastSynonyms }: AnimatedTextProps) {
+export default function AnimatedText({
+  fields,
+  enthusiastSynonyms,
+}: AnimatedTextProps) {
   const [currentField, setCurrentField] = useState("");
   const [currentSynonym, setCurrentSynonym] = useState("");
   const [displayText, setDisplayText] = useState("");
@@ -21,21 +24,13 @@ export default function AnimatedText({ fields, enthusiastSynonyms }: AnimatedTex
   const [isTyping, setIsTyping] = useState(true);
 
   const selectRandomFieldAndSynonym = useCallback(() => {
-    if (!fields || fields.length === 0 || enthusiastSynonyms.length === 0) {
-      console.error("Fields or enthusiastSynonyms is empty");
-      return;
-    }
+    if (!fields.length || !enthusiastSynonyms.length) return;
 
-    const randomField = fields[Math.floor(Math.random() * fields.length)];
-
-    if (!randomField) {
-      console.error("Random field is undefined");
-      return;
-    }
-
+    const randomField = fields[Math.floor(Math.random() * fields.length)]!;
     const randomSynonym =
-      enthusiastSynonyms[Math.floor(Math.random() * enthusiastSynonyms.length)] ??
-      "Enthusiast";
+      enthusiastSynonyms[
+        Math.floor(Math.random() * enthusiastSynonyms.length)
+      ] ?? "Enthusiast";
 
     setCurrentField(randomField.field);
     setCurrentSynonym(randomSynonym);
@@ -86,7 +81,13 @@ export default function AnimatedText({ fields, enthusiastSynonyms }: AnimatedTex
         return () => clearTimeout(timeout);
       }
     }
-  }, [typingIndex, currentField, currentSynonym, isTyping, selectRandomFieldAndSynonym]);
+  }, [
+    typingIndex,
+    currentField,
+    currentSynonym,
+    isTyping,
+    selectRandomFieldAndSynonym,
+  ]);
 
   return (
     <div className="mt-2 h-8">
@@ -97,7 +98,7 @@ export default function AnimatedText({ fields, enthusiastSynonyms }: AnimatedTex
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -10 }}
           transition={{ duration: 0.5 }}
-          className="font-comingSoon text-2xl text-gray-400 font-semibold"
+          className="font-comingSoon text-2xl font-semibold text-gray-400"
         >
           {displayText}
           <span className="animate-blink">|</span>
