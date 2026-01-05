@@ -1,8 +1,30 @@
 [
   {
+    "title": "Officer Development Program (ODP) IT",
+    "organization": "PT Bank Syariah Indonesia (Persero) Tbk",
+    "duration": "Jul 2025 - Present",
+    "description": [
+      "Participated in an accelerated career program for IT officers, featuring intensive training in Islamic banking, leadership, and IT development.",
+      "Engaged in job training and project-based assignments under the guidance of experienced mentors, and enhanced soft skills through involvement in a key project, specifically conducting automation testing for BSI's core banking migration."
+    ],
+    "type": "work"
+    
+  },
+  {
+    "title": "Data Science Trainee",
+    "organization": "PT Algoritma Data Indonesia",
+    "duration": "Apr 2025 - Jun 2025",
+    "description": [
+      "Delivered engaging, hands-on data science classes and workshops, providing dedicated mentorship and technical support to foster a positive and effective learning environment.",
+      "Designed and developed comprehensive data science curricula and learning materials for beginner to intermediate learners, ensuring content was aligned with current industry standards.",
+      "Managed the full course lifecycle through the Class Management System, contributing to pedagogical strategies that enhanced teaching effectiveness and ensured grading met all SLA standards."
+    ],
+    "type": "work"
+  },
+  {
     "title": "Teaching Assistant",
     "organization": "Faculty of Computer Science Universitas Indonesia",
-    "duration": "Jun 2022 - Present",
+    "duration": "Jun 2022 - Jun 2025",
     "description": [
       "Conducted tutoring sessions to help struggling students catch up in their classes, and also developed and implemented student-led projects that promoted critical thinking and collaboration.",
       "Have been assisting in several classes: Calculus 1, Discrete Mathematics, Statistics and Probability, Introduction to Digital System, Programming Foundations 2, Computer Vision, and Software Engineering."
@@ -71,9 +93,7 @@
       "Planned organization's budget for one period."
     ],
     "type": "volunteering",
-    "image": [
-      "https://i.imgur.com/hx4eM6j.jpg"
-    ]
+    "image": ["https://i.imgur.com/hx4eM6j.jpg"]
   },
   {
     "title": "Mentor of IEEExcel : Accelerate yourself in Data Analytics with Experts",

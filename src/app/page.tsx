@@ -1,11 +1,24 @@
+"use client";
 import React from "react";
+import dynamic from "next/dynamic";
 import Navbar from "~/app/_components/Navbar";
-import HeroSection from "~/app/_components/HeroSection";
-import ExperienceSection from "~/app/_components/Experiences";
-import ProjectsSection from "~/app/_components/Projects";
-import EducationSection from "./_components/Educations";
 import Footer from "./_components/Footer";
-import HonorsSection from "./_components/Honors";
+
+const HeroSection = dynamic(() => import("~/app/_components/HeroSection"), {
+  ssr: false,
+});
+const ProjectsSection = dynamic(() => import("~/app/_components/Projects"), {
+  ssr: false,
+});
+const ExperienceSection = dynamic(() => import("~/app/_components/Experiences"), {
+  ssr: false,
+});
+const EducationSection = dynamic(() => import("./_components/Educations"), {
+  ssr: false,
+});
+const HonorsSection = dynamic(() => import("./_components/Honors"), {
+  ssr: false,
+});
 
 export default function Home() {
   return (
